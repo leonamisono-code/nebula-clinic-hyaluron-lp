@@ -869,33 +869,22 @@ em{ font-style: normal; }
   margin: 0 auto;
 }
 
-/* Card: navy medical background, image right */
+/* Card: white, image right */
 .reason{
   position: relative;
   display: grid;
   grid-template-columns: 1fr;
   min-height: 220px;
-  background: linear-gradient(135deg, #0a1a3a 0%, #0d2d52 60%, #0a1f3d 100%);
-  border: 1px solid rgba(201,163,104,.2);
+  background: #fff;
+  border: 1px solid var(--line);
   border-radius: var(--radius-lg);
   overflow: hidden;
   transition: transform .2s, box-shadow .2s;
-  box-shadow: 0 8px 32px rgba(0,0,0,.28);
+  box-shadow: var(--shadow-sm);
 }
 .reason:hover{
   transform: translateY(-3px);
-  box-shadow: 0 16px 48px rgba(0,0,0,.38);
-}
-/* subtle grid-line texture */
-.reason::after{
-  content: '';
-  position: absolute;
-  inset: 0;
-  background-image:
-    linear-gradient(rgba(100,160,255,.04) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(100,160,255,.04) 1px, transparent 1px);
-  background-size: 32px 32px;
-  pointer-events: none;
+  box-shadow: var(--shadow);
 }
 @media (min-width: 720px){
   .reason{
@@ -918,13 +907,13 @@ em{ font-style: normal; }
     height: auto;
     order: 1;
   }
-  /* fade image into navy on left edge */
+  /* fade image into white on left edge */
   .reason__fig::before{
     content: '';
     position: absolute;
     top: 0; left: 0; bottom: 0;
     width: 90px;
-    background: linear-gradient(to right, #0a1a3a, transparent);
+    background: linear-gradient(to right, #fff, transparent);
     z-index: 1;
     pointer-events: none;
   }
@@ -969,14 +958,14 @@ em{ font-style: normal; }
   font-style: italic;
   font-size: 11px;
   letter-spacing: .3em;
-  color: var(--gold);
+  color: var(--gold-2);
   text-transform: uppercase;
 }
 .reason__no{
   font-family: var(--serif-en);
   font-style: italic;
   font-size: 48px;
-  color: rgba(255,255,255,.15);
+  color: rgba(14,26,58,.12);
   line-height: 1;
   font-weight: 500;
   letter-spacing: -.02em;
@@ -985,7 +974,7 @@ em{ font-style: normal; }
   font-family: var(--serif);
   font-size: 20px;
   line-height: 1.55;
-  color: #fff;
+  color: var(--navy);
   font-weight: 600;
   margin: 0;
 }
@@ -995,7 +984,7 @@ em{ font-style: normal; }
 .reason__desc{
   font-size: 13.5px;
   line-height: 1.95;
-  color: rgba(246,241,232,.72);
+  color: var(--ink-2);
   margin: 0;
 }
 
