@@ -43,16 +43,12 @@
      Marketing-friendly: starts at 8, occasionally drops by 1 to a floor of 3
      over the session — purely UX urgency. Persists per-tab. */
   let slots = parseInt(sessionStorage.getItem('nb_slots') || '8', 10);
-  const slotIds = ['slots','slots-inline','slots-final','slots-bar'];
+  const slotIds = ['slots','slots-inline','slots-final','slots-final2','slots-bar'];
   function paintSlots(){
     slotIds.forEach(id => {
       const el = document.getElementById(id);
       if(el) el.textContent = slots;
     });
-    // slots-final2 (slot meter)
-    const sf2 = document.getElementById('slots-final2');
-    if(sf2) sf2.textContent = slots;
-
     // 進捗バー更新 (total=22想定)
     const total = 22;
     const used = total - slots;
