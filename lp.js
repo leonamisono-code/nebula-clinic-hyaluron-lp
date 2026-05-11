@@ -49,6 +49,27 @@
       const el = document.getElementById(id);
       if(el) el.textContent = slots;
     });
+    // slots-final2 (slot meter)
+    const sf2 = document.getElementById('slots-final2');
+    if(sf2) sf2.textContent = slots;
+
+    // 進捗バー更新 (total=22想定)
+    const total = 22;
+    const used = total - slots;
+    const pct = Math.round((used / total) * 100);
+    const fill = document.getElementById('slots-fill');
+    const pctEl = document.getElementById('slots-pct');
+    const usedEl = document.getElementById('slots-used');
+    if(fill) fill.style.width = pct + '%';
+    if(pctEl) pctEl.textContent = pct + '%';
+    if(usedEl) usedEl.textContent = used;
+
+    // 残り枠警告ステート
+    const urgencyEls = document.querySelectorAll('.price-card__urgency, .stickybar__deal');
+    urgencyEls.forEach(el => {
+      el.classList.toggle('urgency--critical', slots <= 5);
+      el.classList.toggle('urgency--danger', slots <= 3);
+    });
   }
   paintSlots();
   // Random gentle decrement every 90-180s, never below 3
@@ -86,6 +107,32 @@
     targets.forEach(el => io.observe(el));
   } else {
     targets.forEach(el => el.classList.add('in'));
+  }
+
+  /* ===== Mobile Ripple ===== */
+  document.querySelectorAll('.cta--primary, .stickybar__btn--book').forEach(btn => {
+    btn.addEventListener('pointerdown', function(e){
+      const rect = this.getBoundingClientRect();
+      const ripple = document.createElement('span');
+      ripple.className = 'ripple';
+      ripple.style.left = (e.clientX - rect.left) + 'px';
+      ripple.style.top  = (e.clientY - rect.top)  + 'px';
+      this.appendChild(ripple);
+      ripple.addEventListener('animationend', () => ripple.remove());
+    });
+  });
+
+  /* ===== Stickybar 最終CTA到達で自動退場 ===== */
+  const finalSection = document.getElementById('reserve');
+  const stickybar = document.querySelector('.stickybar');
+  if(finalSection && stickybar){
+    const barObs = new IntersectionObserver(entries => {
+      entries.forEach(e => {
+        stickybar.style.transition = 'transform .3s ease';
+        stickybar.style.transform  = e.isIntersecting ? 'translateY(100%)' : 'translateY(0)';
+      });
+    }, { threshold: 0.3 });
+    barObs.observe(finalSection);
   }
 
   /* ===== Smooth anchor offset ===== */
