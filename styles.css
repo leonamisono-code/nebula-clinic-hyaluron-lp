@@ -521,7 +521,7 @@ em{ font-style: normal; }
 }
 .price-card__num{
   font-family: var(--serif-en);
-  font-style: italic;
+  font-style: normal;
   font-weight: 500;
   color: #fff;
   display:flex;
@@ -531,7 +531,7 @@ em{ font-style: normal; }
 }
 .price-card__num em{
   font-size: clamp(48px, 14vw, 76px);
-  font-style: italic;
+  font-style: normal;
   background: linear-gradient(180deg, #ffe9d3, var(--gold));
   -webkit-background-clip: text;
   background-clip: text;
