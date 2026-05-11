@@ -201,6 +201,7 @@ em{ font-style: normal; }
   font-weight: 700;
   text-align:center;
   position:relative;
+  overflow:hidden;
   transition: transform .2s ease, box-shadow .2s ease;
   letter-spacing: .08em;
 }
