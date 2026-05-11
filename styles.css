@@ -527,16 +527,17 @@ em{ font-style: normal; }
   display:flex;
   align-items: baseline;
   gap: 6px;
+  padding-top: 10px;
+  overflow: visible;
 }
 .price-card__num em{
   font-size: 76px;
   font-style: italic;
-  padding-top: 8px;
   background: linear-gradient(180deg, #ffe9d3, var(--gold));
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
-  line-height: 1.15;
+  line-height: 1.2;
   letter-spacing: -.01em;
 }
 .price-card__num small{
