@@ -921,6 +921,9 @@ em{ font-style: normal; }
   object-position: center;
   display: block;
 }
+@media (min-width: 720px){
+  .reason__fig img{ object-position: top center; }
+}
 
 /* Text */
 .reason__text{
