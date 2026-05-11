@@ -130,7 +130,7 @@ em{ font-style: normal; }
   font-size: 18px;
   font-weight: 600;
   margin: 0 2px;
-  font-style: italic;
+  font-style: normal;
 }
 .countdown{
   display:flex; align-items:center; gap:3px;
@@ -894,13 +894,15 @@ em{ font-style: normal; }
 .reason__fig{
   margin: 0;
   overflow: hidden;
-  height: 190px;
+  aspect-ratio: 1 / 1;
   order: -1;
   background: var(--cream);
 }
 @media (min-width: 720px){
   .reason__fig{
+    aspect-ratio: unset;
     height: auto;
+    align-self: stretch;
     order: 1;
     position: relative;
   }
@@ -916,6 +918,7 @@ em{ font-style: normal; }
 .reason__fig img{
   width: 100%; height: 100%;
   object-fit: cover;
+  object-position: center;
   display: block;
 }
 
@@ -1312,7 +1315,7 @@ em{ font-style: normal; }
 }
 .countdown--xl .cd-num{
   font-size: 36px;
-  font-style: italic;
+  font-style: normal;
 }
 .countdown--xl .cd-lbl{ font-size: 9.5px; margin-top: 6px; }
 .countdown--xl .cd-sep{ font-size: 26px; padding-bottom: 0; }
@@ -1457,15 +1460,16 @@ em{ font-style: normal; }
   font-weight: 500;
 }
 .stickybar__btn-main{
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 700;
-  letter-spacing: .06em;
+  letter-spacing: .04em;
   font-family: var(--sans);
   line-height: 1;
+  white-space: nowrap;
 }
 .stickybar__btn-arrow{
   font-family: var(--serif-en);
-  font-style: italic;
+  font-style: normal;
   margin-left: 2px;
 }
 
@@ -1525,7 +1529,6 @@ em{ font-style: normal; }
   .menu-card__title{ font-size: 18px; }
 
   /* Reasons */
-  .reason__fig{ height: 180px; }
   .reason__text{ padding: 20px 18px 24px; gap: 8px; }
   .reason__h{ font-size: 17px; }
   .reason__desc{ font-size: 13px; }
