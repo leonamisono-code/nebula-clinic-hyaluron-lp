@@ -18,7 +18,8 @@
   --line-light: rgba(255,255,255,0.18);
 
   --serif: "Shippori Mincho","Noto Serif JP",ui-serif,serif;
-  --serif-en: "Cormorant Garamond","Shippori Mincho",serif;
+  --serif-en: "DM Sans","Noto Sans JP",sans-serif;
+  --num: "DM Sans","Noto Sans JP",sans-serif;
   --script: "Italianno",cursive;
   --sans: "Noto Sans JP",-apple-system,BlinkMacSystemFont,system-ui,sans-serif;
 
@@ -144,6 +145,7 @@ em{ font-style: normal; }
   color:#fff; letter-spacing:.04em;
   font-variant-numeric: tabular-nums;
   font-family: var(--serif-en);
+  font-style: normal;
   line-height: 1;
 }
 .cd-lbl{
@@ -946,10 +948,10 @@ em{ font-style: normal; }
 }
 .reason__no{
   font-family: var(--serif-en);
-  font-style: italic;
+  font-style: normal;
   font-size: 16px;
   color: var(--gold-2);
-  font-weight: 400;
+  font-weight: 500;
 }
 .reason__h{
   font-family: var(--serif);
@@ -1001,8 +1003,8 @@ em{ font-style: normal; }
   color: var(--gold-2);
 }
 .flow__step strong{
-  font-size: 28px; font-style: italic;
-  color: var(--navy); font-weight: 500;
+  font-size: 28px; font-style: normal;
+  color: var(--navy); font-weight: 600;
   letter-spacing: -.01em;
 }
 .flow-list h4{
