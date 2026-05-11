@@ -1470,14 +1470,14 @@ em{ font-style: normal; }
   .cta__note{ font-size: 11px; }
 
   /* Section shell */
-  .section{ padding: 44px 0 48px; }
-  .section-h{ font-size: 22px; margin-bottom: 28px; }
-  .eyebrow{ font-size: 11px; margin-bottom: 10px; }
+  .section{ padding: 32px 0 36px; }
+  .section-h{ font-size: 21px; margin-bottom: 20px; }
+  .eyebrow{ font-size: 11px; margin-bottom: 8px; }
   .lead{ font-size: 14px; }
 
   /* Price card */
-  .price-card{ padding: 22px 18px 20px; }
-  .price-card__num em{ font-size: 58px; }
+  .price-card{ padding: 18px 16px 16px; }
+  .price-card__num em{ font-size: 52px; }
 
   /* Mechanism */
   .mech-grid{ gap: 12px; }
@@ -1485,19 +1485,19 @@ em{ font-style: normal; }
   .mech-points li{ padding: 16px; }
 
   /* Menu cards */
-  .menu-card{ padding: 20px 18px 18px; }
-  .menu-card__title{ font-size: 19px; }
+  .menu-card{ padding: 16px 14px 14px; }
+  .menu-card__title{ font-size: 18px; }
 
   /* Reasons */
-  .reason{ padding: 22px 18px; }
-  .reason__num-fig{ font-size: 52px; }
-  .reason__body h3{ font-size: 18px; }
+  .reason{ padding: 16px 14px; }
+  .reason__num-fig{ font-size: 44px; }
+  .reason__body h3{ font-size: 16px; }
 
   /* Flow */
-  .flow-list li{ padding: 18px 16px; }
+  .flow-list li{ padding: 14px 14px; }
 
   /* Doctor */
-  .dr-card{ padding: 24px 20px 26px; }
+  .dr-card{ padding: 18px 16px 20px; }
   .dr-card__photo{ width: 140px; height: 140px; }
   .dr-card__name{ font-size: 20px; }
 
@@ -1507,7 +1507,7 @@ em{ font-style: normal; }
   .clinic-gmap{ height: 240px; }
 
   /* Final CTA */
-  .final{ padding: 52px 0 60px; }
+  .final{ padding: 36px 0 44px; }
   .final__script{ font-size: 54px; }
   .countdown--xl .cd-num{ font-size: 28px; }
   .countdown--xl .cd-cell{ min-width: 50px; padding: 10px 8px 8px; }
@@ -1525,4 +1525,19 @@ em{ font-style: normal; }
   /* Price card marketing elements */
   .price-card__off{ font-size: 18px; }
   .price-card__saving{ font-size: 11px; }
+
+  /* Inner spacing */
+  .menu-grid{ margin-top: 18px; gap: 14px; }
+  .reason-list{ margin-top: 16px; gap: 12px; }
+  .flow-list{ gap: 10px; }
+  .dr-grid{ gap: 16px; }
+  .mech-diagram{ margin-bottom: 16px; }
+  .mech-points{ gap: 10px; }
+  .mech-points li{ padding: 12px; }
+  .faq-list{ gap: 8px; }
+  .faq-list summary{ padding: 13px 16px; padding-right: 40px; }
+  .faq-a{ padding: 12px 16px; }
+  .foot{ padding: 20px 0 16px; }
+  .worry__list{ gap: 8px; margin-top: 16px; }
+  .worry__cta{ margin-top: 18px; }
 }
