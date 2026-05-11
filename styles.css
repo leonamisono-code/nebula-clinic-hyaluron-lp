@@ -949,41 +949,39 @@ em{ font-style: normal; }
 
 .reason__label{
   display: flex;
-  align-items: baseline;
-  gap: 10px;
+  align-items: center;
+  gap: 8px;
   margin: 0;
 }
 .reason__en{
   font-family: var(--serif-en);
   font-style: italic;
   font-size: 11px;
-  letter-spacing: .3em;
+  letter-spacing: .25em;
   color: var(--gold-2);
   text-transform: uppercase;
 }
 .reason__no{
   font-family: var(--serif-en);
   font-style: italic;
-  font-size: 48px;
-  color: rgba(14,26,58,.12);
-  line-height: 1;
-  font-weight: 500;
-  letter-spacing: -.02em;
+  font-size: 20px;
+  color: var(--gold-2);
+  font-weight: 400;
 }
 .reason__h{
   font-family: var(--serif);
-  font-size: 20px;
-  line-height: 1.55;
+  font-size: 19px;
+  line-height: 1.6;
   color: var(--navy);
   font-weight: 600;
   margin: 0;
 }
 @media (min-width: 880px){
-  .reason__h{ font-size: 22px; }
+  .reason__h{ font-size: 21px; }
 }
 .reason__desc{
   font-size: 13.5px;
-  line-height: 1.95;
+  line-height: 1.9;
   color: var(--ink-2);
   margin: 0;
 }
@@ -1541,8 +1539,7 @@ em{ font-style: normal; }
 
   /* Reasons */
   .reason__fig{ height: 180px; }
-  .reason__text{ padding: 20px 18px 24px; gap: 10px; }
-  .reason__no{ font-size: 38px; }
+  .reason__text{ padding: 20px 18px 24px; gap: 8px; }
   .reason__h{ font-size: 17px; }
   .reason__desc{ font-size: 13px; }
 
