@@ -873,8 +873,8 @@ em{ font-style: normal; }
 
 /* Card — clean clinic style */
 .reason{
-  display: grid;
-  grid-template-columns: 1fr;
+  display: flex;
+  flex-direction: column;
   background: #fff;
   border-radius: var(--radius);
   overflow: hidden;
@@ -887,40 +887,27 @@ em{ font-style: normal; }
   box-shadow: 0 6px 28px rgba(14,26,58,.12);
 }
 @media (min-width: 720px){
-  .reason{ grid-template-columns: 1fr 280px; }
+  .reason{ flex-direction: row; align-items: stretch; }
 }
 
 /* Illustration */
 .reason__fig{
   margin: 0;
-  overflow: hidden;
-  aspect-ratio: 1 / 1;
   order: -1;
-  background: var(--cream);
-  position: relative;
-}
-@media (min-width: 720px){
-  .reason__fig{
-    aspect-ratio: unset;
-    height: 260px;
-    align-self: center;
-    order: 1;
-  }
-  .reason__fig::before{
-    content: '';
-    position: absolute;
-    inset: 0 auto 0 0;
-    width: 70px;
-    background: linear-gradient(to right, #fff, transparent);
-    z-index: 1;
-  }
+  background: #e8f4fb;
 }
 .reason__fig img{
   width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: top center;
+  height: auto;
   display: block;
+}
+@media (min-width: 720px){
+  .reason__fig{
+    order: 1;
+    width: 300px;
+    flex-shrink: 0;
+    flex-grow: 0;
+  }
 }
 
 /* Text */
