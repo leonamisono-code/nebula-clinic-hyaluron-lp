@@ -7,8 +7,28 @@
 <meta name="description" content="ネビュラクリニック広島院。輪郭・カスタマイズ・ほうれい線、3つのヒアルロン酸メニューが税込¥9,800。専門医による上品な仕上がり。カウンセリング無料／アフターケア無料。" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500;600;700;800&family=Noto+Sans+JP:wght@300;400;500;600;700&family=Outfit:wght@300;400;500;600&family=Italianno&display=swap" rel="stylesheet" />
-<link rel="stylesheet" href="styles.css" />
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500;600;700;800&family=Noto+Sans+JP:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&family=Italianno&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="styles-v14.css?v=16" />
+<style>
+/* REASONS: single composite image */
+.reason-list{
+  list-style:none !important;
+  padding:0 !important;
+  margin:0 auto !important;
+  display:block !important;
+}
+.reason-list li{
+  line-height:0;
+  text-align:center;
+}
+.reason-img{
+  width:100%;
+  max-width:720px;
+  height:auto;
+  display:inline-block;
+  border-radius:var(--radius-lg);
+}
+</style>
 </head>
 <body>
   <!-- Sticky Top Countdown Bar -->
@@ -210,44 +230,12 @@
         <h2 id="reasons-h" class="section-h">Nebula Clinic が<br class="sp-only"/>選ばれる、<span class="grad-line">3つの理由</span>。</h2>
 
         <ol class="reason-list">
-          <li class="reason">
-            <figure class="reason__fig" aria-hidden="true">
-              <picture>
-                <source srcset="assets/reason-01.webp" type="image/webp" />
-                <img src="assets/reason-01.png" alt="" loading="lazy" />
-              </picture>
-            </figure>
-            <div class="reason__text">
-              <p class="reason__label"><span class="reason__en">Reason</span><span class="reason__no">01</span></p>
-              <h3 class="reason__h">「自然」を最優先する、<br class="pc-only"/>専門医のデザイン力。</h3>
-              <p class="reason__desc">ヒアルロン酸は「入れる量」より「どこに、どう積み上げるか」が9割。骨格・表情筋・将来のたるみ方まで読みきった上で、最小量で最大の変化を設計します。<strong>"やった感"のない、わたしらしい仕上がり</strong>を。</p>
-            </div>
-          </li>
-          <li class="reason">
-            <figure class="reason__fig" aria-hidden="true">
-              <picture>
-                <source srcset="assets/reason-02.webp" type="image/webp" />
-                <img src="assets/reason-02.png" alt="" loading="lazy" />
-              </picture>
-            </figure>
-            <div class="reason__text">
-              <p class="reason__label"><span class="reason__en">Reason</span><span class="reason__no">02</span></p>
-              <h3 class="reason__h">部位に合わせた製剤を、<br class="pc-only"/>医師が責任を持って選定。</h3>
-              <p class="reason__desc">注入する部位の動きや皮膚の状態に合わせて、医師が製剤の種類・量を一人ひとり判断します。<strong>カウンセリングから施術まで、同じ医師が一貫して担当</strong>するからこそ、細かな調整が可能です。</p>
-            </div>
-          </li>
-          <li class="reason">
-            <figure class="reason__fig" aria-hidden="true">
-              <picture>
-                <source srcset="assets/reason-03.webp" type="image/webp" />
-                <img src="assets/reason-03.png" alt="" loading="lazy" />
-              </picture>
-            </figure>
-            <div class="reason__text">
-              <p class="reason__label"><span class="reason__en">Reason</span><span class="reason__no">03</span></p>
-              <h3 class="reason__h">施術後も、<br class="pc-only"/>ずっと同じ医師が伴走。</h3>
-              <p class="reason__desc">カウンセリング・施術・経過観察まで、<strong>担当医師が一貫して</strong>対応。施術後に気になる点があれば何度でも無料でご相談いただけます。「打って終わり」にしない、責任の取れる医療を。</p>
-            </div>
+          <li>
+            <picture>
+              <source media="(max-width:719px)" srcset="assets/reasons-sp.webp" type="image/webp" />
+              <source media="(min-width:720px)" srcset="assets/reasons.webp" type="image/webp" />
+              <img class="reason-img" src="assets/reasons.webp" alt="選ばれる3つの理由" loading="lazy" />
+            </picture>
           </li>
         </ol>
       </div>

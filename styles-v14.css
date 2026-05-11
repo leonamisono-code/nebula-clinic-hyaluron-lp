@@ -893,21 +893,23 @@ em{ font-style: normal; }
   .reason{ flex-direction: row; align-items: stretch; }
 }
 
-/* Illustration */
+/* Illustration — background-image set via inline style on each <figure> */
 .reason__fig{
   margin: 0;
   order: -1;
+  flex-shrink: 0;
   background-color: #e8f4fb;
   background-size: cover;
-  background-position: center;
-  aspect-ratio: 4 / 3;
+  background-position: top center;
+  height: 180px;
 }
 @media (min-width: 720px){
   .reason__fig{
     order: 1;
     width: 300px;
     flex-shrink: 0;
-    aspect-ratio: unset;
+    height: auto;
+    align-self: stretch;
     background-position: top center;
   }
 }
@@ -949,6 +951,7 @@ em{ font-style: normal; }
 .reason__h{
   font-family: var(--serif);
   font-size: 20px;
+  overflow-wrap: break-word;
   line-height: 1.6;
   color: var(--navy);
   font-weight: 600;
@@ -1130,6 +1133,8 @@ em{ font-style: normal; }
   font-family: var(--serif);
   font-size: 14px;
   font-weight: 600;
+  text-align: justify;
+  text-align-last: justify;
   color: var(--gold-2);
   letter-spacing: .14em;
   font-weight: 600;
