@@ -869,121 +869,106 @@ em{ font-style: normal; }
   margin: 0 auto;
 }
 
-/* Card: white, image right */
+/* Card — clean clinic style */
 .reason{
-  position: relative;
   display: grid;
   grid-template-columns: 1fr;
-  min-height: 220px;
   background: #fff;
-  border: 1px solid var(--line);
-  border-radius: var(--radius-lg);
+  border-radius: var(--radius);
   overflow: hidden;
-  transition: transform .2s, box-shadow .2s;
-  box-shadow: var(--shadow-sm);
+  box-shadow: 0 2px 16px rgba(14,26,58,.07);
+  border-left: 3px solid var(--gold);
+  transition: box-shadow .2s, transform .2s;
 }
 .reason:hover{
-  transform: translateY(-3px);
-  box-shadow: var(--shadow);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 28px rgba(14,26,58,.12);
 }
 @media (min-width: 720px){
-  .reason{
-    grid-template-columns: 1fr 300px;
-    min-height: 200px;
-  }
+  .reason{ grid-template-columns: 1fr 280px; }
 }
 
 /* Illustration */
 .reason__fig{
   margin: 0;
-  position: relative;
   overflow: hidden;
-  height: 200px;
+  height: 190px;
   order: -1;
-  background: #071228;
+  background: var(--cream);
 }
 @media (min-width: 720px){
   .reason__fig{
     height: auto;
     order: 1;
+    position: relative;
   }
-  /* fade image into white on left edge */
   .reason__fig::before{
     content: '';
     position: absolute;
-    top: 0; left: 0; bottom: 0;
-    width: 90px;
+    inset: 0 auto 0 0;
+    width: 70px;
     background: linear-gradient(to right, #fff, transparent);
     z-index: 1;
-    pointer-events: none;
   }
 }
 .reason__fig img{
-  width: 100%;
-  height: 100%;
+  width: 100%; height: 100%;
   object-fit: cover;
-  object-position: center;
   display: block;
-  opacity: .92;
 }
 
-/* Text block */
+/* Text */
 .reason__text{
-  padding: 28px 22px 32px;
+  padding: 28px 28px 32px;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  gap: 12px;
+  gap: 14px;
   min-width: 0;
-  order: 1;
-  position: relative;
-  z-index: 1;
 }
 @media (min-width: 720px){
-  .reason__text{
-    order: -1;
-    padding: 40px 36px 40px 40px;
-    gap: 14px;
-  }
+  .reason__text{ padding: 36px 32px 36px 36px; }
 }
 
 .reason__label{
   display: flex;
-  align-items: center;
-  gap: 8px;
+  align-items: baseline;
+  gap: 6px;
   margin: 0;
 }
 .reason__en{
   font-family: var(--serif-en);
   font-style: italic;
   font-size: 11px;
-  letter-spacing: .25em;
+  letter-spacing: .28em;
   color: var(--gold-2);
   text-transform: uppercase;
 }
 .reason__no{
   font-family: var(--serif-en);
   font-style: italic;
-  font-size: 20px;
+  font-size: 16px;
   color: var(--gold-2);
   font-weight: 400;
 }
 .reason__h{
   font-family: var(--serif);
-  font-size: 19px;
+  font-size: 20px;
   line-height: 1.6;
   color: var(--navy);
   font-weight: 600;
   margin: 0;
 }
 @media (min-width: 880px){
-  .reason__h{ font-size: 21px; }
+  .reason__h{ font-size: 22px; }
 }
 .reason__desc{
-  font-size: 13.5px;
-  line-height: 1.9;
+  font-size: 14px;
+  line-height: 1.95;
   color: var(--ink-2);
   margin: 0;
+  padding-top: 4px;
+  border-top: 1px solid var(--line);
 }
 
 /* ============== FLOW ============== */
