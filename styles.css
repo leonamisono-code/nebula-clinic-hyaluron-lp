@@ -871,6 +871,7 @@ em{ font-style: normal; }
 .reason{
   display: grid;
   grid-template-columns: 1fr;
+  grid-template-rows: auto;
   gap: 0;
   background: #fff;
   border: 1px solid var(--line);
@@ -883,7 +884,11 @@ em{ font-style: normal; }
   box-shadow: var(--shadow);
 }
 @media (min-width: 720px){
-  .reason{ grid-template-columns: 220px 1fr; }
+  /* 3-col: [illustration | number | body] */
+  .reason{
+    grid-template-columns: 200px 160px 1fr;
+    align-items: stretch;
+  }
 }
 /* Illustration */
 .reason__fig{
@@ -892,7 +897,7 @@ em{ font-style: normal; }
   display: flex;
   align-items: center;
   justify-content: center;
-  min-height: 160px;
+  min-height: 150px;
   overflow: hidden;
 }
 .reason__fig img{
@@ -902,39 +907,22 @@ em{ font-style: normal; }
   display: block;
 }
 @media (min-width: 720px){
-  .reason__fig{ min-height: 200px; }
-}
-/* Content wrapper (num + body) */
-.reason__content{
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 16px;
-  padding: 24px 22px;
-}
-@media (min-width: 720px){
-  .reason__content{
-    grid-template-columns: 160px 1fr;
-    gap: 28px;
-    padding: 32px 32px;
-    align-items: center;
-  }
+  .reason__fig{ min-height: unset; }
 }
 .reason__num{
   display: flex;
   flex-direction: column;
   font-family: var(--serif-en);
-  border-right: none;
-  padding-bottom: 12px;
+  padding: 20px 18px;
   border-bottom: 1px solid var(--line);
 }
 @media (min-width:720px){
   .reason__num{
-    border-right: 1px solid var(--line);
     border-bottom: none;
-    padding-right: 28px;
-    padding-bottom: 0;
-    height: 100%;
+    border-right: 1px solid var(--line);
+    padding: 32px 24px;
     justify-content: center;
+    align-items: flex-start;
   }
 }
 .reason__num-en{
@@ -951,6 +939,13 @@ em{ font-style: normal; }
   line-height: 1;
   font-weight: 500;
   letter-spacing: -.02em;
+}
+.reason__body{
+  padding: 20px 18px 24px;
+  min-width: 0;
+}
+@media (min-width: 720px){
+  .reason__body{ padding: 32px 28px; }
 }
 .reason__body h3{
   font-family: var(--serif);
@@ -1521,9 +1516,10 @@ em{ font-style: normal; }
   .menu-card__title{ font-size: 18px; }
 
   /* Reasons */
-  .reason__content{ padding: 18px 16px; gap: 12px; }
-  .reason__fig{ min-height: 140px; }
+  .reason__fig{ min-height: 130px; }
+  .reason__num{ padding: 14px 16px; }
   .reason__num-fig{ font-size: 44px; }
+  .reason__body{ padding: 16px 16px 20px; }
   .reason__body h3{ font-size: 16px; }
 
   /* Flow */
