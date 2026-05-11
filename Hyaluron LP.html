@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<title>自然に整う、わたしらしい美しさ｜ヒアルロン酸 ¥9,800｜Nebula Clinic</title>
+<meta name="description" content="ネビュラクリニック広島院。輪郭・カスタマイズ・ほうれい線、3つのヒアルロン酸メニューが税込¥9,800。専門医による上品な仕上がり。カウンセリング無料／アフターケア無料。" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500;600;700;800&family=Noto+Sans+JP:wght@300;400;500;600;700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Italianno&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- Sticky Top Countdown Bar -->
+  <header class="topbar" id="topbar">
+    <div class="topbar__inner">
+      <a href="#top" class="topbar__brand" aria-label="Nebula Clinic">
+        <img class="brand-mark" src="assets/logo-mark.png" alt="" />
+        <span class="brand-word">Nebula Clinic</span>
+      </a>
+      <div class="topbar__deal">
+        <span class="deal-label">今月末終了</span>
+        <span class="deal-divider"></span>
+        <span class="deal-slots">残り <strong id="slots">8</strong> 枠 <em class="deal-urgency">のみ</em></span>
+      </div>
+      <div class="countdown" aria-label="キャンペーン終了までの残り時間">
+        <div class="cd-cell"><span class="cd-num" id="cd-d">00</span><span class="cd-lbl">DAYS</span></div>
+        <span class="cd-sep">:</span>
+        <div class="cd-cell"><span class="cd-num" id="cd-h">00</span><span class="cd-lbl">HRS</span></div>
+        <span class="cd-sep">:</span>
+        <div class="cd-cell"><span class="cd-num" id="cd-m">00</span><span class="cd-lbl">MIN</span></div>
+        <span class="cd-sep">:</span>
+        <div class="cd-cell"><span class="cd-num cd-sec" id="cd-s">00</span><span class="cd-lbl">SEC</span></div>
+      </div>
+    </div>
+  </header>
+
+  <main id="top">
+    <!-- FV / HERO -->
+    <section class="fv" aria-label="ファーストビュー">
+      <picture>
+        <source media="(min-width: 880px)" srcset="assets/fv-pc.png" type="image/png" />
+        <source media="(max-width: 879px)" srcset="assets/fv-sp.webp" type="image/webp" />
+        <img class="fv__img" src="assets/fv-sp.png" alt="Nebula Clinic ヒアルロン酸 — 自然に整う、わたしらしい美しさ" />
+      </picture>
+      <div class="fv__cta-wrap">
+        <a class="cta cta--primary" href="#reserve" data-track="fv-primary">
+          <span class="cta__sub">＼ カウンセリング無料 ／</span>
+          <span class="cta__main">今すぐ無料で相談する</span>
+        </a>
+        <p class="cta__note">最短当日施術可／所要60分／オンライン予約24h受付</p>
+      </div>
+    </section>
+
+    <!-- Trust strip -->
+    <section class="trust" aria-label="実績・特徴">
+      <ul class="trust__list">
+        <li>
+          <span class="trust__num">5,000<small>件+</small></span>
+          <span class="trust__lbl">累計ヒアルロン酸<br/>施術実績</span>
+        </li>
+        <li>
+          <span class="trust__num">¥9,800<small>～</small></span>
+          <span class="trust__lbl">明朗会計<br/>すべて税込価格</span>
+        </li>
+        <li>
+          <span class="trust__num">98<small>%</small></span>
+          <span class="trust__lbl">仕上がり満足度<br/>※当院アンケート</span>
+        </li>
+        <li>
+          <span class="trust__num">60<small>min</small></span>
+          <span class="trust__lbl">来院から退院まで<br/>すきま時間でOK</span>
+        </li>
+      </ul>
+    </section>
+
+    <!-- お悩み -->
+    <section class="section bg-cream worry" aria-labelledby="worry-h">
+      <div class="container">
+        <p class="eyebrow">CHECK LIST</p>
+        <h2 id="worry-h" class="section-h">こんなお悩み、<br class="sp-only"/>ありませんか？</h2>
+        <ul class="worry__list">
+          <li><span class="worry__check">✓</span><span>年齢とともに<strong>フェイスラインがもたつく</strong>ように感じる</span></li>
+          <li><span class="worry__check">✓</span><span><strong>ほうれい線・口元の影</strong>が、写真で気になりはじめた</span></li>
+          <li><span class="worry__check">✓</span><span>こめかみ・頬がこけて、<strong>疲れて見られがち</strong></span></li>
+          <li><span class="worry__check">✓</span><span>大きな手術や長いダウンタイムには<strong>抵抗がある</strong></span></li>
+          <li><span class="worry__check">✓</span><span>「やりすぎ顔」ではなく、<strong>自然な仕上がり</strong>がいい</span></li>
+          <li><span class="worry__check">✓</span><span>本当に自分に合う注入箇所と量を<strong>プロに見てほしい</strong></span></li>
+        </ul>
+        <p class="worry__cta">そのお悩み、<em>Nebula Clinic</em> にお任せください。</p>
+      </div>
+    </section>
+
+    <!-- 価格・メイン提案 -->
+    <section class="section price" aria-labelledby="price-h">
+      <div class="container price__inner">
+        <p class="eyebrow eyebrow--light">PRICE</p>
+        <h2 id="price-h" class="section-h section-h--light">ヒアルロン酸、<br class="sp-only"/>はじめての一歩を、<br/><span class="grad-line">¥9,800</span>から。</h2>
+        <div class="price-card">
+          <div class="price-card__top">
+            <span class="price-card__pill">月末限定キャンペーン</span>
+            <div class="price-card__top-right">
+              <span class="price-card__off">74<small>%</small>OFF</span>
+              <span class="price-card__list">通常価格 <s>¥38,000</s></span>
+            </div>
+          </div>
+          <div class="price-card__main">
+            <span class="price-card__title">ヒアルロン酸</span>
+            <span class="price-card__num"><em>9,800</em><small>円</small></span>
+            <span class="price-card__tax">すべて税込価格</span>
+          </div>
+          <ul class="price-card__bullets">
+            <li>初回カウンセリング <strong>無料</strong></li>
+            <li>アフターケア <strong>無料</strong></li>
+            <li>麻酔クリーム <strong>込</strong></li>
+          </ul>
+          <p class="price-card__saving">通常より <strong>¥28,200 お得</strong> — 今月末で終了</p>
+          <a class="cta cta--primary cta--block" href="#reserve">
+            <span class="cta__sub">＼ カウンセリング無料・最短当日施術 ／</span>
+            <span class="cta__main">¥9,800 で今すぐ予約する</span>
+          </a>
+          <p class="price-card__urgency">
+            <span class="pulse-dot"></span>
+            キャンペーン終了まで <strong id="cd-inline">あと —</strong> ／ 残り <strong id="slots-inline">8</strong> 枠
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 仕組み / WHY HYALURONIC -->
+    <section class="section bg-cream mech" aria-labelledby="mech-h">
+      <div class="container">
+        <p class="eyebrow">MECHANISM</p>
+        <h2 id="mech-h" class="section-h">「たるみ・凹み」は、<br class="sp-only"/>骨格と脂肪のバランスから。</h2>
+        <p class="lead">加齢や体質によって、骨吸収・脂肪移動・支持靭帯のゆるみが進むと、フェイスラインが下がり、影やほうれい線が目立つようになります。<strong>ヒアルロン酸はこの「凹み」をピンポイントに整え、輪郭そのものを底上げ</strong>する施術です。</p>
+
+        <!-- 原因・Before/After 図解 -->
+        <div class="mech-diagram">
+          <picture>
+            <source srcset="assets/mech-diagram.webp" type="image/webp" />
+            <img class="mech-diagram__img" src="assets/mech-diagram.png"
+                 alt="たるみ・ほうれい線の原因メカニズム／施術前・施術直後" loading="lazy" />
+          </picture>
+        </div>
+
+        <ul class="mech-points">
+          <li><span class="mech-num">01</span><div><h4>切らない</h4><p>注入のみ。腫れ・内出血が出にくく、メイクで隠せる程度のダウンタイム。</p></div></li>
+          <li><span class="mech-num">02</span><div><h4>戻せる</h4><p>万一仕上がりが気になっても溶解可能。後戻りできる安心感のある施術です。</p></div></li>
+          <li><span class="mech-num">03</span><div><h4>持続する</h4><p>採用製剤は持続期間 約12〜18ヶ月。じわじわ馴染み、自然な変化が続きます。</p></div></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- 治療メニュー -->
+    <section class="section bg-navy menu" aria-labelledby="menu-h">
+      <div class="container">
+        <p class="eyebrow eyebrow--light">TREATMENT MENU</p>
+        <h2 id="menu-h" class="section-h section-h--light">3つの<span class="serif-en">Hyaluron</span>メニュー、<br/>すべて<em class="price-em">¥9,800</em>。</h2>
+        <p class="lead lead--light">あなたの骨格と希望に合わせて、3つの導入メニューからお選びいただけます。<br/>すべて同一価格。迷ったら、医師が無料カウンセリングで最適解をご提案します。</p>
+
+        <div class="menu-grid">
+          <article class="menu-card">
+            <div class="menu-card__no">M01</div>
+            <h3 class="menu-card__title">輪郭ヒアル<span class="menu-card__en">Contour</span></h3>
+            <p class="menu-card__desc">こめかみ〜頬〜顎ラインを総合的に整え、フェイスラインそのものをシャープに。</p>
+            <figure class="menu-card__case">
+              <img src="assets/case-rinkaku.png" alt="輪郭ヒアル Before / Just After 症例" loading="lazy" />
+            </figure>
+            <ul class="menu-card__chip">
+              <li>額2cc</li><li>こめかみ4cc</li><li>頬1cc</li><li>法令線2cc</li><li>ドールチーク1cc</li><li>唇1cc</li>
+            </ul>
+            <div class="menu-card__price"><span>¥9,800</span><small>税込</small></div>
+          </article>
+
+          <article class="menu-card menu-card--feature">
+            <div class="menu-card__no">M02</div>
+            <h3 class="menu-card__title">カスタマイズヒアル<span class="menu-card__en">Customize</span></h3>
+            <p class="menu-card__desc">気になる部位を組み合わせて。医師と一緒にあなた専用の処方を設計します。</p>
+            <figure class="menu-card__case">
+              <img src="assets/case-customize.png" alt="カスタマイズヒアル Before / Just After 症例" loading="lazy" />
+            </figure>
+            <ul class="menu-card__chip">
+              <li>こめかみ3cc</li><li>目の下1cc</li><li>貴族2cc</li><li>法令線2cc</li><li>唇1cc</li><li>マリオネットライン1cc</li>
+            </ul>
+            <div class="menu-card__price"><span>¥9,800</span><small>税込</small></div>
+          </article>
+
+          <article class="menu-card">
+            <div class="menu-card__no">M03</div>
+            <h3 class="menu-card__title">ほうれい線ヒアル<span class="menu-card__en">Nasolabial</span></h3>
+            <p class="menu-card__desc">ほうれい線・マリオネットラインに特化。医療ハイフとの組み合わせも可能。</p>
+            <figure class="menu-card__case">
+              <img src="assets/case-houreisen.png" alt="ほうれい線ヒアル Before / Just After 症例" loading="lazy" />
+            </figure>
+            <ul class="menu-card__chip">
+              <li>医療ハイフ ウルトラフォーマーMPT</li><li>ヒアルロン酸（貴族2cc/法令線2cc）</li>
+            </ul>
+            <div class="menu-card__price"><span>¥9,800</span><small>税込</small></div>
+          </article>
+        </div>
+
+        <p class="menu-disclaimer">※ 表示価格は税込。麻酔クリーム代込み。針代・診察料・アフターケアは無料。<br/>※ 製剤や追加部位によりオプション料金が発生する場合があります。</p>
+      </div>
+    </section>
+
+    <!-- 選ばれる3つの理由 -->
+    <section class="section reasons" aria-labelledby="reasons-h">
+      <div class="container">
+        <p class="eyebrow">REASONS TO CHOOSE</p>
+        <h2 id="reasons-h" class="section-h">Nebula Clinic が<br class="sp-only"/>選ばれる、<span class="grad-line">3つの理由</span>。</h2>
+
+        <ol class="reason-list">
+          <li class="reason">
+            <div class="reason__num"><span class="reason__num-en">Reason</span><span class="reason__num-fig">01</span></div>
+            <div class="reason__body">
+              <h3>「自然」を最優先する、<br class="pc-only"/>専門医のデザイン力。</h3>
+              <p>ヒアルロン酸は「入れる量」より「どこに、どう積み上げるか」が9割。骨格・表情筋・将来のたるみ方まで読みきった上で、最小量で最大の変化を設計します。<strong>"やった感"のない、わたしらしい仕上がり</strong>を。</p>
+            </div>
+          </li>
+          <li class="reason">
+            <div class="reason__num"><span class="reason__num-en">Reason</span><span class="reason__num-fig">02</span></div>
+            <div class="reason__body">
+              <h3>厳選した、<br class="pc-only"/>高品質ヒアルロン酸製剤のみ。</h3>
+              <p>採用するのは厚生労働省承認・FDA承認クラスの高品質製剤に限定。部位の動きや皮膚の薄さに合わせ、硬さ・粒子径・持続期間の異なる<strong>製剤を使い分け</strong>ています。安さのために安価な製剤を選ぶことはしません。</p>
+            </div>
+          </li>
+          <li class="reason">
+            <div class="reason__num"><span class="reason__num-en">Reason</span><span class="reason__num-fig">03</span></div>
+            <div class="reason__body">
+              <h3>施術後も、<br class="pc-only"/>ずっと同じ医師が伴走。</h3>
+              <p>カウンセリング・施術・経過観察まで、<strong>担当医師が一貫して</strong>対応。施術後に気になる点があれば何度でも無料でご相談いただけます。「打って終わり」にしない、責任の取れる医療を。</p>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- 流れ -->
+    <section class="section bg-cream flow" aria-labelledby="flow-h">
+      <div class="container">
+        <p class="eyebrow">TREATMENT FLOW</p>
+        <h2 id="flow-h" class="section-h">来院から、<br class="sp-only"/>仕上がりまで <em class="grad-line">60分</em>。</h2>
+
+        <ol class="flow-list">
+          <li>
+            <div class="flow__step"><span>STEP</span><strong>01</strong></div>
+            <h4>WEB予約・お問い合わせ</h4>
+            <p>24時間受付の予約フォーム or LINE で、ご希望日時を選ぶだけ。<br/>当日予約も可能です。</p>
+            <span class="flow__time">所要 1分</span>
+          </li>
+          <li>
+            <div class="flow__step"><span>STEP</span><strong>02</strong></div>
+            <h4>無料カウンセリング</h4>
+            <p>骨格・表情・お悩みを医師が直接診察。<br/>注入箇所と量、料金を提示します。</p>
+            <span class="flow__time">約 20分</span>
+          </li>
+          <li>
+            <div class="flow__step"><span>STEP</span><strong>03</strong></div>
+            <h4>麻酔・施術</h4>
+            <p>表面麻酔の上、極細針で注入。<br/>痛みと腫れを最小限に。</p>
+            <span class="flow__time">約 20分</span>
+          </li>
+          <li>
+            <div class="flow__step"><span>STEP</span><strong>04</strong></div>
+            <h4>仕上がり確認・お会計</h4>
+            <p>鏡で左右差・ボリュームを確認。<br/>追加料金は一切ありません。</p>
+            <span class="flow__time">約 10分</span>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ドクター紹介 -->
+    <section class="section bg-navy doctors" aria-labelledby="dr-h">
+      <div class="container">
+        <p class="eyebrow eyebrow--light">DOCTOR</p>
+        <h2 id="dr-h" class="section-h section-h--light">担当医師紹介</h2>
+
+        <div class="dr-grid">
+          <article class="dr-card">
+            <div class="dr-card__photo">
+              <img src="assets/dr-shiraiwa.jpg" alt="白岩 拓巳 医師" loading="lazy" />
+            </div>
+            <p class="dr-card__role">ネビュラクリニック<br/>代表／理事長</p>
+            <h3 class="dr-card__name">白岩 拓巳<span class="dr-card__en">Takumi Shiraiwa</span></h3>
+            <p class="dr-card__quote">「変えるのは、顔ではなく自信です。」<br/>あなたの "わたしらしさ" を引き出す注入を。</p>
+            <ul class="dr-card__cred">
+              <li>美容外科専門医</li>
+              <li>ヒアルロン酸注入 <strong>3,000件超</strong></li>
+              <li>輪郭・口元領域 専門</li>
+            </ul>
+          </article>
+
+          <article class="dr-card">
+            <div class="dr-card__photo">
+              <img src="assets/dr-sumio.jpg" alt="住尾 祥隆 医師" loading="lazy" />
+            </div>
+            <p class="dr-card__role">ネビュラクリニック広島院<br/>院長</p>
+            <h3 class="dr-card__name">住尾 祥隆<span class="dr-card__en">Hirotaka Sumio</span></h3>
+            <p class="dr-card__quote">「自然に、上品に。」<br/>骨格から逆算した最小限の注入を心がけています。</p>
+            <ul class="dr-card__cred">
+              <li>美容外科専門医</li>
+              <li>カウンセリング満足度 <strong>98%</strong></li>
+              <li>骨格デザイン・全顔調整 専門</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- 院案内 -->
+    <section class="section clinic" aria-labelledby="clinic-h">
+      <div class="container">
+        <p class="eyebrow">CLINIC</p>
+        <h2 id="clinic-h" class="section-h">院内・<em class="grad-line">アクセス</em></h2>
+
+        <img class="clinic-interior" src="assets/clinic-interior.jpg" alt="ネビュラクリニック広島院 院内" loading="lazy"
+             onerror="this.style.display='none'" />
+
+        <dl class="clinic-dl">
+          <div><dt>院　名</dt><dd>ネビュラクリニック 広島院</dd></div>
+          <div><dt>住　所</dt><dd>〒730-0035<br/>広島県広島市中区本通4-7 コズミックビル3F</dd></div>
+          <div><dt>アクセス</dt><dd>広島電鉄「本通駅」徒歩2分<br/>広島バス「本通り」徒歩2分</dd></div>
+          <div><dt>T E L</dt><dd><a href="tel:0120077393">0120-077-393</a></dd></div>
+          <div><dt>診療時間</dt><dd>10:00 〜 19:00</dd></div>
+          <div><dt>休 診 日</dt><dd>不定休</dd></div>
+        </dl>
+
+        <iframe
+          class="clinic-gmap"
+          src="https://maps.google.com/maps?q=広島県広島市中区本通4-7+コズミックビル&output=embed&z=16&hl=ja"
+          allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+          title="ネビュラクリニック広島院 地図"
+        ></iframe>
+        <a class="clinic-map-link" href="https://www.google.com/maps?q=広島県広島市中区本通4-7" target="_blank" rel="noopener">Google Maps でルートを調べる →</a>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section bg-cream faq" aria-labelledby="faq-h">
+      <div class="container">
+        <p class="eyebrow">FAQ</p>
+        <h2 id="faq-h" class="section-h">よくあるご質問</h2>
+
+        <ul class="faq-list">
+          <li>
+            <details>
+              <summary><span class="faq-q">Q.</span>本当に¥9,800で受けられますか？追加料金は？</summary>
+              <div class="faq-a"><span>A.</span><p>はい、表示価格はすべて税込・追加料金なしです。麻酔クリーム代・針代・アフターケアもすべて含まれています。製剤の種類変更や追加部位を希望される場合のみ、事前にお見積りをお伝えしオプション料金をご案内します。</p></div>
+            </details>
+          </li>
+          <li>
+            <details>
+              <summary><span class="faq-q">Q.</span>ダウンタイムはどのくらいですか？</summary>
+              <div class="faq-a"><span>A.</span><p>多くの方が翌日からメイクで隠せる程度。腫れや内出血が出ても2〜7日で落ち着きます。当日のお仕事復帰も可能ですが、念のため大事なご予定の前1週間は避けることをおすすめします。</p></div>
+            </details>
+          </li>
+          <li>
+            <details>
+              <summary><span class="faq-q">Q.</span>痛みはありますか？</summary>
+              <div class="faq-a"><span>A.</span><p>表面麻酔クリームを塗布したうえで、極細針またはマイクロカニューレで注入します。注入時の痛みは「軽い圧迫感」程度。痛みに敏感な方には、追加の局所麻酔も可能です。</p></div>
+            </details>
+          </li>
+          <li>
+            <details>
+              <summary><span class="faq-q">Q.</span>持続期間はどのくらい？やめたらどうなる？</summary>
+              <div class="faq-a"><span>A.</span><p>採用製剤は約12〜18ヶ月が目安。徐々に体内に吸収されるため、施術をやめても元のお顔に戻るだけで「副作用として残る」ことはありません。万一仕上がりが気になる場合は溶解注射での修正も可能です。</p></div>
+            </details>
+          </li>
+          <li>
+            <details>
+              <summary><span class="faq-q">Q.</span>初めてで、何を選べばいいか分かりません。</summary>
+              <div class="faq-a"><span>A.</span><p>大丈夫です。多くの方が初診時に「何となく気になる」だけで来院されます。医師がお顔を直接拝見し、骨格・表情・将来のたるみ方からおすすめの導入を提案します。<strong>提案を聞いてから決めていただいてOK</strong>です。当日施術しない選択もちろん可能。</p></div>
+            </details>
+          </li>
+          <li>
+            <details>
+              <summary><span class="faq-q">Q.</span>友人・家族に気づかれずに済みますか？</summary>
+              <div class="faq-a"><span>A.</span><p>当院のご提案は「最小量で骨格を底上げする」発想です。一気に大きく変えるのではなく、本人すら忘れた頃に「最近きれいになった？」と言われる仕上がりを目指します。やりすぎが心配な方ほど、ぜひご相談を。</p></div>
+            </details>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- 最終CTA -->
+    <section class="section final" id="reserve" aria-labelledby="final-h">
+      <div class="final__bg" aria-hidden="true"></div>
+      <div class="container final__inner">
+        <p class="eyebrow eyebrow--light">RESERVE NOW</p>
+        <p class="final__script">Hyaluron</p>
+        <h2 id="final-h" class="section-h section-h--light">
+          ¥9,800 で、<br/>
+          <span class="grad-line">"わたしらしい"</span>を、<br class="sp-only"/>はじめる。
+        </h2>
+        <p class="final__lead">
+          <span class="final__deadline">⚠ 今月末でキャンペーン終了</span><br/>
+          残り <strong id="slots-final">8</strong> 枠 ／ カウンセリング無料
+        </p>
+
+        <!-- inline countdown big -->
+        <div class="countdown countdown--xl" aria-label="キャンペーン終了までの残り時間">
+          <div class="cd-cell"><span class="cd-num" id="cd-d2">00</span><span class="cd-lbl">DAYS</span></div>
+          <span class="cd-sep">:</span>
+          <div class="cd-cell"><span class="cd-num" id="cd-h2">00</span><span class="cd-lbl">HRS</span></div>
+          <span class="cd-sep">:</span>
+          <div class="cd-cell"><span class="cd-num" id="cd-m2">00</span><span class="cd-lbl">MIN</span></div>
+          <span class="cd-sep">:</span>
+          <div class="cd-cell"><span class="cd-num cd-sec" id="cd-s2">00</span><span class="cd-lbl">SEC</span></div>
+        </div>
+
+        <div class="final__cta">
+          <a class="cta cta--primary cta--xl" href="#" data-track="final-reserve">
+            <span class="cta__sub">＼ 24h受付・最短当日・カウンセリング無料 ／</span>
+            <span class="cta__main">¥9,800 で今すぐ予約する →</span>
+          </a>
+          <a class="cta cta--ghost" href="tel:0120077393" data-track="final-tel">
+            <span class="cta__main">📞 0120-077-393</span>
+            <span class="cta__sub">受付 10:00〜19:00</span>
+          </a>
+        </div>
+        <p class="final__note">※ ご予約状況によりご希望に添えない場合がございます。お早めにご相談ください。</p>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="foot">
+      <div class="container foot__inner">
+        <a class="foot__brand" href="#top">
+          <img class="brand-mark" src="assets/logo-mark.png" alt="" />
+          <span>Nebula Clinic</span>
+        </a>
+        <p>〒730-0035 広島県広島市中区本通4-7 コズミックビル3F<br/>診療時間 10:00〜19:00（不定休） ／ TEL 0120-077-393</p>
+        <p class="foot__copy">© Nebula Clinic. All rights reserved.</p>
+      </div>
+    </footer>
+  </main>
+
+  <!-- Sticky bottom CTA bar -->
+  <nav class="stickybar" aria-label="予約・お電話">
+    <div class="stickybar__deal">
+      <span class="stickybar__deal-lbl">月末限定 残り</span>
+      <strong class="stickybar__deal-num" id="slots-bar">8</strong>
+      <span class="stickybar__deal-lbl">枠</span>
+      <span class="stickybar__deal-sep"></span>
+      <span class="stickybar__cd" id="cd-bar">00:00:00:00</span>
+    </div>
+    <div class="stickybar__btns">
+      <a class="stickybar__btn stickybar__btn--tel" href="tel:0120077393" aria-label="電話で予約">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M6.6 10.8c1.4 2.8 3.8 5.2 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.4c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.4 0 .7-.2 1l-2.2 2.2z"/></svg>
+        <span>電話で<br/>無料相談</span>
+      </a>
+      <a class="stickybar__btn stickybar__btn--book" href="#reserve" aria-label="WEB予約">
+        <span class="stickybar__btn-sub">＼ 最短当日施術 ／</span>
+        <span class="stickybar__btn-main">無料WEB予約 →</span>
+      </a>
+    </div>
+  </nav>
+
+  <script src="lp.js"></script>
+</body>
+</html>
