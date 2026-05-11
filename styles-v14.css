@@ -1616,6 +1616,7 @@ em{ font-style: normal; }
 .slot-meter__caption{
   font-size:11px; opacity:.75; letter-spacing:.05em;
 }
+.slot-meter__caption strong{ color:#fff; font-family:var(--sans); }
 
 /* ===== Urgency States (残り枠警告) ===== */
 @keyframes borderPulse{
