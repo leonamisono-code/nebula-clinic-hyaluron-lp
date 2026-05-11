@@ -8,7 +8,42 @@
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500;600;700;800&family=Noto+Sans+JP:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&family=Italianno&display=swap" rel="stylesheet" />
-<link rel="stylesheet" href="styles.css?v=14" />
+<link rel="stylesheet" href="styles-v14.css" />
+<style>
+/* REASON SECTION — inline override to bypass CSS cache */
+.reason{
+  display:grid !important;
+  grid-template-columns:1fr !important;
+  position:relative;
+}
+@media(min-width:720px){
+  .reason{
+    grid-template-columns:1fr 300px !important;
+  }
+}
+.reason__fig{
+  margin:0;
+  order:-1;
+  background-color:#e8f4fb;
+  background-size:cover !important;
+  background-position:center !important;
+  aspect-ratio:4/3;
+  overflow:hidden;
+  min-height:0;
+}
+.reason__fig picture,
+.reason__fig img{ display:none !important; }
+@media(min-width:720px){
+  .reason__fig{
+    order:1;
+    aspect-ratio:unset !important;
+    background-position:top center !important;
+    min-height:100%;
+    grid-row:1;
+    grid-column:2;
+  }
+}
+</style>
 </head>
 <body>
   <!-- Sticky Top Countdown Bar -->
