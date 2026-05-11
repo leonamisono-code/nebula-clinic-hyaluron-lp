@@ -450,10 +450,12 @@ em{ font-style: normal; }
   color: var(--navy);
 }
 .worry__cta em{
-  font-family: var(--serif-en);
-  font-style: italic;
+  font-family: var(--script);
+  font-style: normal;
+  font-size: 1.25em;
   color: var(--pink);
   margin: 0 4px;
+  letter-spacing: .02em;
 }
 
 /* ============== PRICE SECTION (between worry & mech) ============== */
@@ -1126,7 +1128,8 @@ em{ font-style: normal; }
 .clinic-dl > div:last-child{ border-bottom: none; }
 .clinic-dl dt{
   font-family: var(--serif);
-  font-size: 13px;
+  font-size: 14px;
+  font-weight: 600;
   color: var(--gold-2);
   letter-spacing: .14em;
   font-weight: 600;
@@ -1136,9 +1139,10 @@ em{ font-style: normal; }
 }
 .clinic-dl dd{
   margin: 0;
-  font-size: 13.5px;
+  font-size: 14px;
   color: var(--ink);
-  line-height: 1.85;
+  line-height: 1.9;
+  letter-spacing: .01em;
 }
 .clinic-dl dd a{
   color: var(--pink);
