@@ -528,10 +528,9 @@ em{ font-style: normal; }
   align-items: baseline;
   gap: 6px;
   padding-top: 10px;
-  overflow: visible;
 }
 .price-card__num em{
-  font-size: 76px;
+  font-size: clamp(48px, 14vw, 76px);
   font-style: italic;
   background: linear-gradient(180deg, #ffe9d3, var(--gold));
   -webkit-background-clip: text;
@@ -1516,7 +1515,7 @@ em{ font-style: normal; }
 
   /* Price card */
   .price-card{ padding: 18px 16px 16px; }
-  .price-card__num em{ font-size: 52px; }
+  .price-card__num em{ font-size: clamp(40px, 13vw, 56px); }
 
   /* Mechanism */
   .mech-grid{ gap: 12px; }
