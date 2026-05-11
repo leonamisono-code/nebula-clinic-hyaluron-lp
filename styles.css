@@ -864,15 +864,17 @@ em{ font-style: normal; }
 /* ============== REASONS ============== */
 .reason-list{
   display: grid;
-  gap: 24px;
-  max-width: 920px;
+  gap: 20px;
+  max-width: 960px;
   margin: 0 auto;
 }
+
+/* Card: image on right, text overlaid on left */
 .reason{
+  position: relative;
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: auto;
-  gap: 0;
+  min-height: 220px;
   background: #fff;
   border: 1px solid var(--line);
   border-radius: var(--radius-lg);
@@ -884,84 +886,102 @@ em{ font-style: normal; }
   box-shadow: var(--shadow);
 }
 @media (min-width: 720px){
-  /* 3-col: [illustration | number | body] */
   .reason{
-    grid-template-columns: 200px 160px 1fr;
-    align-items: stretch;
+    grid-template-columns: 1fr 320px;
+    min-height: 200px;
   }
 }
-/* Illustration */
+
+/* Illustration — stacks on top (mobile) / right column (desktop) */
 .reason__fig{
   margin: 0;
-  background: var(--cream);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 150px;
+  position: relative;
   overflow: hidden;
+  height: 200px;
+  order: -1; /* top on mobile */
+}
+@media (min-width: 720px){
+  .reason__fig{
+    height: auto;
+    order: 1; /* right on desktop */
+    position: relative;
+  }
+  /* gradient fade image into white on left edge */
+  .reason__fig::before{
+    content: '';
+    position: absolute;
+    top: 0; left: 0; bottom: 0;
+    width: 80px;
+    background: linear-gradient(to right, #fff, transparent);
+    z-index: 1;
+    pointer-events: none;
+  }
 }
 .reason__fig img{
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: center;
   display: block;
 }
-@media (min-width: 720px){
-  .reason__fig{ min-height: unset; }
-}
-.reason__num{
+
+/* Text block */
+.reason__text{
+  padding: 24px 22px 28px;
   display: flex;
   flex-direction: column;
-  font-family: var(--serif-en);
-  padding: 20px 18px;
-  border-bottom: 1px solid var(--line);
+  justify-content: center;
+  gap: 10px;
+  min-width: 0;
+  order: 1;
 }
-@media (min-width:720px){
-  .reason__num{
-    border-bottom: none;
-    border-right: 1px solid var(--line);
-    padding: 32px 24px;
-    justify-content: center;
-    align-items: flex-start;
+@media (min-width: 720px){
+  .reason__text{
+    order: -1;
+    padding: 36px 32px 36px 36px;
+    gap: 12px;
   }
 }
-.reason__num-en{
+
+.reason__label{
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  margin: 0;
+}
+.reason__en{
+  font-family: var(--serif-en);
   font-style: italic;
-  font-size: 13px;
+  font-size: 12px;
+  letter-spacing: .28em;
   color: var(--gold-2);
-  letter-spacing: .25em;
   text-transform: uppercase;
 }
-.reason__num-fig{
+.reason__no{
+  font-family: var(--serif-en);
   font-style: italic;
-  font-size: 76px;
+  font-size: 44px;
   color: var(--navy);
   line-height: 1;
   font-weight: 500;
   letter-spacing: -.02em;
 }
-.reason__body{
-  padding: 20px 18px 24px;
-  min-width: 0;
-}
-@media (min-width: 720px){
-  .reason__body{ padding: 32px 28px; }
-}
-.reason__body h3{
+.reason__h{
   font-family: var(--serif);
-  font-size: 21px;
-  line-height: 1.6;
+  font-size: 20px;
+  line-height: 1.55;
   color: var(--navy);
-  margin-bottom: 12px;
   font-weight: 600;
+  margin: 0;
 }
-@media (min-width:880px){
-  .reason__body h3{ font-size: 24px; }
+@media (min-width: 880px){
+  .reason__h{ font-size: 23px; }
 }
-.reason__body p{
-  font-size: 14.5px;
-  line-height: 1.95;
+.reason__desc{
+  font-size: 14px;
+  line-height: 1.9;
   color: var(--ink-2);
+  margin: 0;
 }
 
 /* ============== FLOW ============== */
@@ -1516,11 +1536,11 @@ em{ font-style: normal; }
   .menu-card__title{ font-size: 18px; }
 
   /* Reasons */
-  .reason__fig{ min-height: 130px; }
-  .reason__num{ padding: 14px 16px; }
-  .reason__num-fig{ font-size: 44px; }
-  .reason__body{ padding: 16px 16px 20px; }
-  .reason__body h3{ font-size: 16px; }
+  .reason__fig{ height: 170px; }
+  .reason__text{ padding: 18px 16px 22px; gap: 8px; }
+  .reason__no{ font-size: 36px; }
+  .reason__h{ font-size: 17px; }
+  .reason__desc{ font-size: 13px; }
 
   /* Flow */
   .flow-list li{ padding: 14px 14px; }
