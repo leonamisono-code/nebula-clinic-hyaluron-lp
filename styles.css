@@ -18,7 +18,7 @@
   --line-light: rgba(255,255,255,0.18);
 
   --serif: "Shippori Mincho","Noto Serif JP",ui-serif,serif;
-  --serif-en: "Raleway","Noto Sans JP",sans-serif;
+  --serif-en: "Inter","Noto Sans JP",sans-serif;
   --num: "Outfit","Noto Sans JP",sans-serif;
   --script: "Italianno",cursive;
   --sans: "Noto Sans JP",-apple-system,BlinkMacSystemFont,system-ui,sans-serif;
@@ -902,9 +902,9 @@ em{ font-style: normal; }
 @media (min-width: 720px){
   .reason__fig{
     aspect-ratio: unset;
-    align-self: stretch;
+    height: 260px;
+    align-self: center;
     order: 1;
-    min-height: 220px;
   }
   .reason__fig::before{
     content: '';
@@ -916,12 +916,10 @@ em{ font-style: normal; }
   }
 }
 .reason__fig img{
-  position: absolute;
-  inset: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center top;
+  object-position: top center;
   display: block;
 }
 
