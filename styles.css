@@ -531,11 +531,12 @@ em{ font-style: normal; }
 .price-card__num em{
   font-size: 76px;
   font-style: italic;
+  padding-top: 8px;
   background: linear-gradient(180deg, #ffe9d3, var(--gold));
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
-  line-height: 1;
+  line-height: 1.15;
   letter-spacing: -.01em;
 }
 .price-card__num small{
