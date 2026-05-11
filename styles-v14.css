@@ -1406,7 +1406,7 @@ em{ font-style: normal; }
 }
 .stickybar__btns{
   display: grid;
-  grid-template-columns: 1fr 2fr;
+  grid-template-columns: 1fr;
   gap: 0;
   height: 58px;
 }
