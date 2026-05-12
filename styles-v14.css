@@ -570,10 +570,12 @@ em{ font-style: normal; }
 .price-card__urgency{
   margin-top: 14px;
   text-align:center;
-  font-size: 12.5px;
+  font-size: 12px;
   color: rgba(255,255,255,.85);
   display:flex; align-items:center; justify-content:center;
-  gap: 8px;
+  flex-wrap: nowrap;
+  white-space: nowrap;
+  gap: 6px;
 }
 .price-card__urgency strong{ color: var(--pink); font-family: var(--serif-en); font-size: 14px; }
 .pulse-dot{
